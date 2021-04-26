@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/username_sup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textfield_shape"
+        android:hint="@string/username"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/email_sup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:paddingLeft="20dp"
+        android:padding="10dp"
+        android:background="@drawable/textfield_shape"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:maxLength="50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_sup"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/create_password_sup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Create Password"
+        android:paddingLeft="20dp"
+        android:padding="10dp"
+        android:background="@drawable/textfield_shape"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:maxLength="15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_sup"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
+
+    <EditText
+        android:id="@+id/cnfm_password_sup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirm_password"
+        android:paddingLeft="20dp"
+        android:padding="10dp"
+        android:background="@drawable/textfield_shape"
+        android:layout_marginTop="10dp"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:maxLength="15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_password_sup"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/pass_not_match"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:text=""
+        android:textColor="#EA1919"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cnfm_password_sup"
+        app:layout_constraintVertical_bias="0.039" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield_shape"
+        android:hint="@string/code"
+        android:inputType="number"
+        android:maxLength="6"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_password_sup"
+        app:layout_constraintVertical_bias="0.358"
+        app:layout_constraintWidth_percent=".4"
+        app:layout_constraintHorizontal_bias=".5"/>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:text="Sign up"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cnfm_password_sup"
+        app:layout_constraintVertical_bias="0.515"
+        app:layout_constraintWidth_percent=".6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
