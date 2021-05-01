@@ -20,14 +20,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091"
+        app:layout_constraintVertical_bias="0.184"
         app:layout_constraintWidth_percent=".8" />
 
     <EditText
         android:id="@+id/email_sup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:hint="@string/email"
         android:paddingLeft="20dp"
         android:padding="10dp"
         android:background="@drawable/textfield_shape"
@@ -46,7 +46,7 @@
         android:id="@+id/create_password_sup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Create Password"
+        android:hint="@string/create_password"
         android:paddingLeft="20dp"
         android:padding="10dp"
         android:background="@drawable/textfield_shape"
@@ -89,16 +89,15 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cnfm_password_sup"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
 
     <EditText
         android:id="@+id/otp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:background="@drawable/textfield_shape"
         android:hint="@string/code"
         android:inputType="number"
@@ -106,13 +105,31 @@
         android:maxLines="1"
         android:padding="10dp"
         android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/create_password_sup"
-        app:layout_constraintVertical_bias="0.358"
-        app:layout_constraintWidth_percent=".4"
-        app:layout_constraintHorizontal_bias=".5"/>
+        app:layout_constraintTop_toBottomOf="@+id/cnfm_password_sup"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".4" />
+
+    <Button
+        android:id="@+id/send_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:text="Verify"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cnfm_password_sup"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".6" />
 
     <Button
         android:id="@+id/signup"
@@ -126,7 +143,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cnfm_password_sup"
-        app:layout_constraintVertical_bias="0.515"
+        app:layout_constraintVertical_bias="0.722"
         app:layout_constraintWidth_percent=".6" />
 
 
