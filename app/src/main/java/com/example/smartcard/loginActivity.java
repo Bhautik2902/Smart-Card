@@ -55,7 +55,7 @@ public class loginActivity extends AppCompatActivity {
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
 
         signup_frag_action sfa = new signup_frag_action(loginActivity.this);
-
+        logintab_frag_action ltfa = new logintab_frag_action(loginActivity.this);
 
 
     }
@@ -66,7 +66,8 @@ public class loginActivity extends AppCompatActivity {
     }
 
     public void checkData(String uname, String pass) {
-
+        Login_background lbg = new Login_background(loginActivity.this);
+        lbg.execute(uname, pass);
     }
 
     public void openDashboard() {

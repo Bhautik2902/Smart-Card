@@ -31,6 +31,7 @@ public class logintab_frag_action extends Fragment {
     logintab_frag_action(loginActivity la) {
         activity = (loginActivity) la;
     }
+    logintab_frag_action() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,8 +54,9 @@ public class logintab_frag_action extends Fragment {
                     warning.setText("Each field must be filled");
                 }
                 else {
-
-
+                    int hashed_pass = pass.hashCode();
+                    String hashed_str = hashed_pass + "";
+                    activity.checkData(uname, hashed_str);
                 }
             }
         });

@@ -74,7 +74,13 @@ public class signup_frag_action extends Fragment {
                 String confirmpass = confirm_pass.getText().toString();
                 String email_add = email.getText().toString().trim();
                 String otp_str = otpval.getText().toString().trim();
-
+                int otp_number = 0;
+                if (otp_str.length() == 6) {
+                    otp_number = Integer.parseInt(otp_str);
+                }
+                else {
+                    passnotmatch.setText("OTP must be 6 digit long");
+                }
 
                 try {
                     if (uname.length() == 0 || createpass.length() == 0 || confirmpass.length() == 0 || email_add.length() == 0 || otp_str.length() == 0 ) {
@@ -85,7 +91,7 @@ public class signup_frag_action extends Fragment {
                         } else {
                             passnotmatch.setText("");
                             // if password match, send verification mail.
-                            int otp_number = Integer.parseInt(otp_str);
+
                             if (OTP > 0 && OTP == otp_number) {
                                 int hashed_pass = createpass.hashCode();
                                 createpass = hashed_pass+"";
