@@ -28,7 +28,7 @@ import java.nio.charset.StandardCharsets;
 
 import static android.content.ContentValues.TAG;
 
-public class Login_background extends AsyncTask<String, Void, String> {
+public class personalInfo_background extends AsyncTask<String, Void, String> {
     AlertDialog dialog;
     Context context;
     String username="";
@@ -38,7 +38,7 @@ public class Login_background extends AsyncTask<String, Void, String> {
     public static final String TAG = "PROBLEM";
     private ProgressDialog mProgressDialog;
 
-    public Login_background(Context context) {
+    public personalInfo_background(Context context) {
         this.context = context;
     }
 
@@ -51,29 +51,26 @@ public class Login_background extends AsyncTask<String, Void, String> {
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
         mProgressDialog.dismiss();
-        s = s.trim();
-        if (s.equals("Match found")) {
-            Toast.makeText(context, "Login successful", Toast.LENGTH_LONG).show();
-            loginActivity la = (loginActivity)context;
-            la.openDashboard(username);
-        }
-        else {
-            Toast.makeText(context, "Status: " + s, Toast.LENGTH_LONG).show();
-        }
+        Toast.makeText(context, "Status: " + s, Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected String doInBackground(String... voids) {
         String result = "";
-        String user = voids[0];
-        String pass = voids[1];
+        String user_name = voids[0];
+        String name = voids[1];
+        String email = voids[2];
+        String phone = voids[3];
+        String dob = voids[4];
+        String address = voids[5];
+        String state = voids[6];
+        String pin = voids[7];
+        String gender = voids[8];
 
-        //copy username that user entered for login.
-        username = user;
         // String connect = "http://192.168.43.95:8080/signup.php";
-        String connect = "https://smartcardassociation.000webhostapp.com/login.php";
+        String connect = "https://smartcardassociation.000webhostapp.com/personal_info.php";
 
-        String URLparams = "user=" + user + "&" + "pass=" + pass;
+        String URLparams = "user_name="+user_name +"&"+ "name="+name +"&"+ "email="+email +"&"+ "phone="+phone +"&"+ "dob="+dob +"&"+ "address="+address +"&"+ "state="+state +"&"+ "pin="+pin +"&"+ "gender="+gender;
         byte[] postData = URLparams.getBytes(StandardCharsets.UTF_8);
         int postDataLength = postData.length;
 

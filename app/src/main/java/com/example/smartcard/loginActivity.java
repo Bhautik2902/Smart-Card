@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -57,7 +58,6 @@ public class loginActivity extends AppCompatActivity {
         signup_frag_action sfa = new signup_frag_action(loginActivity.this);
         logintab_frag_action ltfa = new logintab_frag_action(loginActivity.this);
 
-
     }
 
     public void saveData(String uname, String pass, String email) {
@@ -70,8 +70,10 @@ public class loginActivity extends AppCompatActivity {
         lbg.execute(uname, pass);
     }
 
-    public void openDashboard() {
+    public void openDashboard(String username) {
+
         Intent intent = new Intent(loginActivity.this, MainActivity.class);
+        intent.putExtra("User", username);
         startActivity(intent);
         finish();
     }
